@@ -14,6 +14,7 @@ const App = () => {
   const [filter, setFilter] = useState("");
   const [sortBy, setSortBy] = useState("market_cap_desc");
 
+  // limit is added as dependency here to refetch the data whenever the limit value changes
   useEffect(() => {
     const fetchCoins = async () => {
       try {
